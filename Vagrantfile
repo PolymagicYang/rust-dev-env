@@ -25,6 +25,11 @@ Vagrant.configure("2") do |config|
   # NOTE: This will enable public access to the opened port
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
+  # Proxy configration for clash for windows.
+  config.proxy.http     = "192.168.56.1:7890"
+  config.proxy.https    = "192.168.56.1:7890"
+  config.proxy.no_proxy = "localhost,127.0.0.1"
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
@@ -43,7 +48,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "./workspace", "/rust-workspace"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
