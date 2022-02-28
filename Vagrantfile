@@ -23,12 +23,12 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 3000, host: 3000 
 
   # Proxy configration for clash for windows.
-  # config.proxy.http     = "192.168.56.1:7890"
-  # config.proxy.https    = "192.168.56.1:7890"
-  # config.proxy.no_proxy = "localhost,127.0.0.1"
+  config.proxy.http     = "192.168.56.1:7890"
+  config.proxy.https    = "192.168.56.1:7890"
+  config.proxy.no_proxy = "localhost,127.0.0.1"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
