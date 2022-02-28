@@ -5,4 +5,3 @@ chmod +x rustup-init
 source $HOME/.cargo/env
 
 # rust toolchains installation.
-cargo install rust-analyzer
