@@ -5,6 +5,6 @@ Personal usage for rust environment based on vagrant.
 vagrant plugin install vagrant-proxyconf
 ```
 ## Specification
->- Box: [generic/arch](https://app.vagrantup.com/generic/boxes/arch)
+>- Box: [generic/ubuntu2004](https://app.vagrantup.com/generic/boxes/ubuntu2004)
 >- VM: VirtualBox 6.0
 >- Rust: nightly channel
