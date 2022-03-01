@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
-  config.vm.network "forwarded_port", guest: 3000, host: 3000 
+  # config.vm.network "forwarded_port", guest: 2333, host: 1234 
 
   # Proxy configration for clash for windows.
   config.proxy.http     = "http://192.168.56.1:7890"
@@ -68,7 +68,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision :shell, path: "provisioning/bootstrap.sh"
+  config.vm.provision :shell, path: "provisions/bootstrap.sh"
   # config.vm.provision "shell", inline: <<-SHELL
   #   apt-get update
   #   apt-get install -y apache2
