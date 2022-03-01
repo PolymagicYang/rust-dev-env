@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 3000, host: 3000 
 
   # Proxy configration for clash for windows.
-  config.proxy.http     = "192.168.56.1:7890"
-  config.proxy.https    = "192.168.56.1:7890"
+  config.proxy.http     = "http://192.168.56.1:7890"
+  config.proxy.https    = "http://192.168.56.1:7890"
   config.proxy.no_proxy = "localhost,127.0.0.1"
 
   # Create a forwarded port mapping which allows access to a specific port
