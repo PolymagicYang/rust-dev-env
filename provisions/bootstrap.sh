@@ -2,13 +2,17 @@
 apt-get update -y
 
 # add linker(cc) environment.
-apt-get install build-essential
+apt-get install -y build-essential gcc fish neovim
 
 # rust nightly installation.
-wget https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
-tar -zxvf rust-nightly-x86_64-unknown-linux-gnu.tar.gz && cd ./rust-nightly-x86_64-unknown-linux-gnu && \
-./install.sh && cd ../ && rm -r rust-nightly-x86_64-unknown-linux-gnu.tar.gz
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \ 
+source ~/.cargo/env && echo "rust installed!"
 
 # rust toolchains installation.
+
+# docker installtion -- which can not be used in production environment.
+curl -fsSL https://get.docker.com -o get-docker.sh
+chmod +x ./get-docker.sh
+sh get-docker.sh
 
 echo "-------- booting finish! ----------"

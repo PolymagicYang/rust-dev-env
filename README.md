@@ -1,5 +1,5 @@
 # rust-dev-env
-Personal usage for rust environment based on vagrant.
+Personal usage for rust environment migration based on vagrant. 
 ## Plugins 
 ```
 vagrant plugin install vagrant-proxyconf
